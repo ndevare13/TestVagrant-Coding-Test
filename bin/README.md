@@ -1,1 +1,0 @@
-# TestVagrant-Coding-Test
