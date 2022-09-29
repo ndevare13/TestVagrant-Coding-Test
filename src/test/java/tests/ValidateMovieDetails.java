@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -16,15 +17,16 @@ import utils.Helper;
 public class ValidateMovieDetails extends BaseTest {
 
 	@Test
-	public void validateImdb() throws ParseException {
+	@Parameters({"movieName"})
+	public void validateImdb(String movieName) throws ParseException {
 
 		IMDBPage imdbPage = new IMDBPage(driver);
-		Map<String, String> imdbDetails = imdbPage.fetchMovieDetailsFromIMDB("Pushpa: The Rise");
+		Map<String, String> imdbDetails = imdbPage.fetchMovieDetailsFromIMDB(movieName);
 
 		driver.get(Helper.getData("wikiUrl"));
 
 		WikiPage wikiPage = new WikiPage(driver);
-		Map<String, String> wikiDetails = wikiPage.fetchMovieDetailsFromWiki("Pushpa: The Rise");
+		Map<String, String> wikiDetails = wikiPage.fetchMovieDetailsFromWiki(movieName);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
 		Date date = sdf.parse(wikiDetails.get("Release Date"));
