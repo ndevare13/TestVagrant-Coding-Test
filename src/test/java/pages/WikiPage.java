@@ -1,13 +1,11 @@
 package pages;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 public class WikiPage extends BasePage {
 	
@@ -35,7 +33,7 @@ public class WikiPage extends BasePage {
 		sendText(searchBar, movieTitle);
 		clickElement(searchButton);
 		
-		Assert.assertTrue(getText(movieTitleHeader).trim().contains(movieTitle), "Movie page is opened successfully");
+//		Assert.assertTrue(getText(movieTitleHeader).trim().contains(movieTitle), "Movie page is opened successfully");
 		
 		String releaseDate = getText(releaseDateValue);
 		String country = getText(countryValue);
@@ -45,14 +43,6 @@ public class WikiPage extends BasePage {
 		movieDetails.put("Country", country);
 		
 		return movieDetails;
-	}
-	
-	private String formattedReleaseDate(String releaseDate) {
-		String formattedReleaseDate;
-		formattedReleaseDate = releaseDate.substring(0, releaseDate.length() - 5) + ", " + 
-				releaseDate.substring(releaseDate.length() - 4);
-		
-		return formattedReleaseDate;
 	}
 
 }
