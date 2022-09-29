@@ -1,20 +1,20 @@
 package tests;
 
-import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import base.BaseTest1;
+import pages.BaseTest;
 import pages.IMDBPage;
 import pages.WikiPage;
 import utils.Helper;
 
-public class ValidateMovieDetails extends BaseTest1 {
+public class ValidateMovieDetails extends BaseTest {
 
 	@Test
 	@Parameters({"movieName"})
