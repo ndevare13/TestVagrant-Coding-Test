@@ -64,6 +64,8 @@ Once above commands are executed, it will automatically open your Chrome browser
 
 You can check the basic report inside your 'test-output' folder, there would be a file named 'emailable-report.html'
 
+&nbsp;
+##### In case there are compilation related issues while running the script, please open this project in any IDE and right click on the project, go to Maven -> Update Project. Once updating is complete, right click on testng.xml -> Run as -> TestNG Suite.
 
 &nbsp;
 ## Closing Notes
