@@ -1,4 +1,4 @@
-package base;
+package pages;
 
 import java.time.Duration;
 
@@ -14,17 +14,19 @@ public class BaseTest {
 	protected WebDriver driver = null;
 	
 	@BeforeClass
-	protected void setUpEnvironment() {
+	public void setUpEnvironment() {
 		System.setProperty("webdriver.chrome.driver", Helper.getData("chromedriverPath"));
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get(Helper.getData("imdbUrl"));
 	}
-
+	
+	
 	@AfterClass
-	protected void tearDown() {
-		driver.quit();
+	public void tearDown() {
+		driver.close();
 	}
+	
 
 }
