@@ -41,7 +41,7 @@ public class WikiPage extends BasePage {
 		String country = getText(countryValue);
 		
 		Map<String, String> movieDetails = new HashMap<String, String>();
-		movieDetails.put("Release Date", formattedReleaseDate(releaseDate));
+		movieDetails.put("Release Date", releaseDate);
 		movieDetails.put("Country", country);
 		
 		return movieDetails;
