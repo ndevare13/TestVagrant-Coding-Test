@@ -9,12 +9,12 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import base.BaseTest;
+import base.BaseTest1;
 import pages.IMDBPage;
 import pages.WikiPage;
 import utils.Helper;
 
-public class ValidateMovieDetails extends BaseTest {
+public class ValidateMovieDetails extends BaseTest1 {
 
 	@Test
 	@Parameters({"movieName"})

@@ -10,9 +10,9 @@ import org.testng.annotations.BeforeClass;
 import utils.Helper;
 
 public class BaseTest {
-
+	
 	protected WebDriver driver = null;
-
+	
 	@BeforeClass
 	protected void setUpEnvironment() {
 		System.setProperty("webdriver.chrome.driver", Helper.getData("chromedriverPath"));
