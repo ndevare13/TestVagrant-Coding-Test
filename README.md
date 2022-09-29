@@ -9,11 +9,13 @@ I have built this project to do fetch Release Date and Country fields of your fa
 
 Please follow the below steps to setup up the dependencies required to run the project.
 
-##### 1. Installing Maven and Chrome browser
+##### 1. Installing Maven, JAVA and Chrome browser
 
 We need to install Maven in our system first to run this project.
 
 Following link has detailed instructions for [Maven Installation](https://maven.apache.org/install.html).
+
+For this project we are using JDK11, so please make sure the correct version is installed from [Oracle Page](https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html).
 
 Please make sure your Chrome browser is using the latest Version 105/106.
 
